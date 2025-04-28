@@ -9,7 +9,12 @@ readme = "README.md"
 homepage = "https://github.com/gberrante/map_3d"
 repository = "https://github.com/gberrante/map_3d"
 keywords = ["geographic", "map", "3d", "transformation", "coordinate"]
-categories = ["science","science::robotics","mathematics","games"]
+categories = ["science", "science::robotics", "mathematics", "games"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+libm = { version = "0.2.11", optional = true }
+
+[features]
+default = []
+no_std = ["dep:libm"]
